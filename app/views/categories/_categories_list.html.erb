@@ -17,9 +17,11 @@
 
  <% @categories.each do |category| %>
  
+ <hr>
+ 
       <h4><%= content_tag(:a, category.name,  :name => category.name) %></h4> 
       <p style="color: #CCCCCC; font-size: 8px;"> <a href="#Categories">back to top</a></p>
-      <hr>
+     
       <% category.memberships.each do |member| %>
 	  
 	  <table style="width:400; margin-bottom:10px">
@@ -48,20 +50,4 @@
      
   <% end %>   
      
-    <h3><a name="ASSOCIATIONS">ASSOCIATIONS</a></h3> 
-    
-    
-<p>
-
-The legal work includes all necessary research, investigation, correspondence, preparation and drafting of pleadings and other legal documents, trial preparation, trial appearances, conferences in person and by telephone with You and with others, and related work to properly represent You in this matter.
-
-2.  Additional Legal Services.  If You need any other legal services which may or may not be related to the above matter, You and the Law Firm may make a new agreement to provide for such services.  Without such agreements, the Law Firm is not required to provide any additional services.
-</p>
-
-
-
-
-
-
-
-<h3><a name="Associations">ASSOCIATIONS</a></h3>
+   
