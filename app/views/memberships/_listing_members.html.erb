@@ -1,0 +1,22 @@
+<h1>Listing memberships</h1>
+
+
+  <% @memberships.each do |membership|%>
+  
+  <h3><%= membership.category.name %></h3>
+  
+    <% @memberships.each do |membership| %>
+   
+        <li><%= link_to(membership.company_name, membership.website) %></li>
+        <li><%= membership.website %></li>
+      
+       
+      
+   
+    <% end %>
+
+  </ul>
+<% end %>
+<br>
+
+<%= link_to 'Membership', root_path %>

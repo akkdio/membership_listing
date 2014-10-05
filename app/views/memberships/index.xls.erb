@@ -1,0 +1,32 @@
+
+
+<table>
+  
+  <th> Company Name </th>
+    <th> Name </th>
+	  <th> Phone </th>
+	    <th> Description </th>
+  <th> Website </th>
+  <th> Membership ID</th>
+  <th> Category Name </th>
+  <th> Category ID </th>
+  
+  
+   <% @memberships.each do |membership| %>
+    <tr>
+
+   
+     <td>  <%= membership.company_name %></td>
+	  <td> <%= membership.name %></td>
+	   <td> <%= membership.phone %></td>
+	    <td> <%= membership.description %></td>
+      <td> <%= membership.website %></td>
+      <td> <%=  membership.id %></td>
+      <td> <%= membership.category.name %></td>
+      <td> <%= membership.category.id %></td>
+   
+   
+</tr>
+<% end %>
+
+</table>

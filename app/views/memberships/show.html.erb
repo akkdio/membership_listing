@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @membership.company_name %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @membership.name %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%= @membership.phone %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @membership.description %>
+</p>
+<p>
+  <strong>Website:</strong>
+  <%= @membership.website %>
+</p>
+<p>
+  <strong>Category Name:</strong>
+  <%= @membership.category.name %>
+</p>
+
+<%= link_to 'Edit', edit_membership_path(@membership) %> |
+<%= link_to 'Back', memberships_path %>

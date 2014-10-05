@@ -1,0 +1,53 @@
+<h1>Listing memberships</h1>
+
+<p>  DOWNLOAD 
+  <%= link_to "CSV", memberships_path(format: "csv" )%>  |
+  <%= link_to "EXCEL", memberships_path(format: "xls")%>
+  </p>
+
+<table>
+  
+  <tr>
+
+    <td><% @memberships.each do |membership| %></td>
+    <tr>
+	<td>  <%= membership.company_name %></td>
+	 <td>  <%= membership.name %></td>
+ </tr>
+ <tr>
+	  <td>  <%= membership.phone %></td>
+	   <td>  <%= membership.description %></td>
+      <td> <%= membership.website %></td>
+	  
+  </tr>
+  <tr>
+      <td> <%=  membership.id %></td>
+      
+  </tr>
+   
+   
+   
+          <tr>
+        <td><%= link_to 'Show', membership %></td>
+        <td><%= link_to 'Edit', edit_membership_path(membership) %></td>
+        <td><%= link_to 'Destroy', membership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  
+   
+    <% end %>
+
+
+</table>
+<hr>
+<br>
+
+<%= link_to 'New Membership', new_membership_path %>
+
+
+
+
+<h2>Import Memberships</h2>
+<%= form_tag import_memberships_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>

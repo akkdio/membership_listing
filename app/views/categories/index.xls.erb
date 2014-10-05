@@ -1,0 +1,18 @@
+
+<table>
+  
+  <th> Category Name </th>
+  <th> Category ID </th>
+  
+   <% @categories.each do |category| %>
+    <tr>
+
+   
+     <td>  <%= category.name %></td>
+    <td>   <%= category.id %></td>
+   
+   
+</tr>
+<% end %>
+
+</table>
