@@ -5,6 +5,21 @@
   <%= link_to "EXCEL", memberships_path(format: "xls")%>
   </p>
 
+
+<p>
+
+<%= link_to 'New Membership', new_membership_path %>
+
+
+
+
+<h2>Import Memberships</h2>
+<%= form_tag import_memberships_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+	
+</p>
 <table>
   
   <tr>
@@ -40,14 +55,3 @@
 </table>
 <hr>
 <br>
-
-<%= link_to 'New Membership', new_membership_path %>
-
-
-
-
-<h2>Import Memberships</h2>
-<%= form_tag import_memberships_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
